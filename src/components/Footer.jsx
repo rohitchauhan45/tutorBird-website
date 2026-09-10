@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-2 md:col-span-1">
           <Logo className="mb-4" />
-          <p className="text-base text-raven/50 leading-relaxed max-w-[16rem]">learning that fits your life</p>
+          <p className="text-base text-raven/50 leading-relaxed max-w-[16rem]">LEARNING THAT FITS YOUR LIFE</p>
         </div>
         <div>
           <p className="text-xs font-bold tracking-[0.16em] uppercase text-raven/40 mb-5">Platform</p>

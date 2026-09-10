@@ -1,15 +1,35 @@
-import { UserRound } from 'lucide-react'
+const TONES = {
+  violet: 'bg-[#EDE6FB] text-violet',
+  teal: 'bg-sky text-iridescence',
+  coral: 'bg-[#F8E4E1] text-coral',
+  sky: 'bg-sky text-iridescence',
+}
 
-export default function FaceIcon({ size = 36, light = false, className = '' }) {
+const FALLBACK = ['violet', 'teal', 'coral', 'sky']
+
+function toneFor(color, seed = '') {
+  if (color && TONES[color]) return TONES[color]
+  const code = seed.charCodeAt(0) || 0
+  return TONES[FALLBACK[code % FALLBACK.length]]
+}
+
+export default function FaceIcon({
+  size = 36,
+  className = '',
+  initial,
+  color,
+  name = '',
+}) {
+  const letter = (initial || name.trim().charAt(0) || '?').toUpperCase()
+  const tone = toneFor(color, letter)
+
   return (
     <span
-      className={`inline-flex items-center justify-center rounded-full border shrink-0 ${
-        light ? 'border-white/75 text-white' : 'border-raven/25 text-raven/55'
-      } ${className}`}
-      style={{ width: size, height: size }}
+      className={`inline-flex items-center justify-center rounded-xl font-bold shrink-0 ${tone} ${className}`}
+      style={{ width: size, height: size, fontSize: Math.round(size * 0.42) }}
       aria-hidden="true"
     >
-      <UserRound size={Math.round(size * 0.52)} strokeWidth={1.6} />
+      {letter}
     </span>
   )
 }

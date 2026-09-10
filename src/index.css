@@ -189,15 +189,6 @@ h1, h2, h3, h4, .font-display {
 .nav-link:hover::after,
 .nav-link.is-active::after { width: 100%; }
 
-.nav-link-on-blob,
-.nav-link-on-blob.btn-ghost {
-  color: var(--midnight);
-  font-weight: 700;
-}
-.nav-link-on-blob:hover,
-.nav-link-on-blob.is-active { color: #fff; }
-.nav-link-on-blob::after { background: #fff; }
-
 .reveal { opacity: 0; transform: translateY(28px); }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; }
@@ -348,6 +339,10 @@ input, textarea {
   padding: 4px;
   background: #fff;
   border-radius: 999px;
+}
+.billing-toggle.w-full {
+  display: flex;
+  width: 100%;
 }
 .billing-toggle button {
   padding: 0.5rem 1.05rem;

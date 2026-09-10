@@ -4,7 +4,7 @@ export default function TutorCard({ tutor }) {
   return (
     <article className={`card p-6 flex flex-col h-full ${tutor.featured ? 'ring-2 ring-violet' : ''}`}>
       <div className="flex items-center gap-3 mb-5">
-        <FaceIcon size={48} />
+        <FaceIcon size={48} initial={tutor.initial} color={tutor.color} name={tutor.name} />
         <div>
           <h3 className="text-lg leading-tight">{tutor.name}</h3>
           <p className="text-sm text-raven/45 mt-0.5">{tutor.meta}</p>

@@ -43,7 +43,7 @@ export default function PricingPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link to="/pricing#parent-plans" className="btn btn-outline">Parent plans</Link>
-          <Link to="/pricing#tutor-plans" className="btn btn-teal">Start your tutor trial</Link>
+          <Link to="/signup?role=tutor" className="btn btn-teal">Start your tutor trial</Link>
         </div>
         </div>
       </header>
@@ -63,7 +63,7 @@ export default function PricingPage() {
                 <li className="check-row">Message tutors</li>
                 <li className="check-row">Book sessions</li>
               </ul>
-              <Link to="/signup" className="btn btn-outline w-full">Sign up for free</Link>
+              <Link to="/signup" className="btn btn-outline w-full">Sign up</Link>
             </div>
             <div className="card card-dark p-8 flex flex-col relative">
               <span className="absolute top-0 right-0 text-xs font-bold tracking-wide uppercase bg-violet text-white px-3 py-1.5 rounded-bl-2xl rounded-tr-[1.15rem]">Popular</span>
@@ -79,7 +79,7 @@ export default function PricingPage() {
               </div>
               <p className="text-white/55 mb-8">Everything in Free, plus study tools.</p>
               <ul className="space-y-3 mb-10 flex-1">
-                <li className="check-row">AI practice</li>
+                <li className="check-row">RavenAI — practice questions + flashcards/memory tools</li>
                 <li className="check-row">Session recordings</li>
                 <li className="check-row">Weekly progress reports</li>
               </ul>
@@ -95,7 +95,7 @@ export default function PricingPage() {
               <h3 className="text-2xl mb-2 text-white">30-day free trial</h3>
               <p className="text-white/55">Get listed, take bookings, and use the in-built calendar before you pick a paid tutor plan.</p>
             </div>
-            <Link to="/become-a-tutor" className="btn btn-teal shrink-0">Start your tutor trial</Link>
+            <Link to="/signup?role=tutor" className="btn btn-teal shrink-0">Start your tutor trial</Link>
           </div>
           <BillingToggle billing={billing} setBilling={setBilling} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -110,7 +110,7 @@ export default function PricingPage() {
                 <li className="check-row">Tutor profile</li>
                 <li className="check-row">In-built calendar</li>
               </ul>
-              <Link to="/become-a-tutor" className="btn btn-outline w-full">Start your tutor trial</Link>
+              <Link to="/signup?role=tutor" className="btn btn-outline w-full">Start your tutor trial</Link>
             </div>
             <div className="card p-8 flex flex-col">
               <p className="text-sm font-bold text-iridescence mb-2">After your tutor trial</p>
@@ -119,11 +119,11 @@ export default function PricingPage() {
               <p className="text-raven/50 mb-8">Your own classroom, plus tools to teach and get found.</p>
               <ul className="space-y-3 mb-10 flex-1">
                 <li className="check-row">Online classroom & whiteboard</li>
+                <li className="check-row">RavenAI — unlimited virtual classroom assistant</li>
                 <li className="check-row">Auto-invoicing</li>
-                <li className="check-row">HSC practice tests</li>
                 <li className="check-row">Enhanced profile visibility</li>
               </ul>
-              <Link to="/become-a-tutor" className="btn btn-outline w-full">Start your tutor trial</Link>
+              <Link to="/signup?role=tutor" className="btn btn-outline w-full">Start your tutor trial</Link>
             </div>
           </div>
         </div>

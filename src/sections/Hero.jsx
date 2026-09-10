@@ -1,18 +1,15 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { HeroVisual } from '../components/Visuals.jsx'
-import { HeroBackdrop } from '../components/OrganicShapes.jsx'
 import { useTypewriter } from '../hooks/useTypewriter.js'
-import SectionLink from '../components/SectionLink.jsx'
 
 const WORDS = ['HSC tutoring', 'debating', 'public speaking']
 
 export default function Hero() {
-  const typed = useTypewriter(WORDS)  
+  const typed = useTypewriter(WORDS)
 
   return (
-    <section className="relative overflow-hidden bg-paper min-h-[100svh] pt-[4.75rem] md:pt-[8rem] pb-12 md:pb-16 px-6 md:px-10">
-      <HeroBackdrop />
+    <section className="relative overflow-hidden bg-paper pt-[4.75rem] md:pt-[8rem] pb-8 md:pb-12 px-6 md:px-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-8 items-start relative z-10">
         <div className="reveal">
           <p className="eyebrow mb-5">Raven · Learning that fits your life.</p>
@@ -26,7 +23,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link to="/signup" className="btn btn-teal btn-lg">
-              Sign up for free <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
+              Sign up <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
             </Link>
             <Link to="/become-a-tutor" className="btn btn-outline btn-lg">Become a Tutor</Link>
           </div>

@@ -13,7 +13,7 @@ export default function FindTutorPage() {
           <p className="text-xl text-raven/55 max-w-xl mb-8">
             Browse full profiles, approximate distance, and availability, then sign up free to message and book.
           </p>
-          <Link to="/signup" className="btn btn-teal">Sign up for free</Link>
+          <Link to="/signup" className="btn btn-teal">Sign up</Link>
         </div>
       </header>
       <Discover preview={false} showHeader={false} />

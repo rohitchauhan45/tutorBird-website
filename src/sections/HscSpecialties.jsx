@@ -23,7 +23,7 @@ const TONE = {
 
 export default function HscSpecialties() {
   return (
-    <section id="hsc-specialties" className="pt-10 md:pt-12 pb-16 md:pb-20 px-6 md:px-10 relative overflow-hidden bg-paper">
+    <section id="hsc-specialties" className="pt-20 md:pt-28 pb-16 md:pb-20 px-6 md:px-10 relative overflow-hidden bg-paper">
       <SectionBlob tone="violet" className="w-80 h-80 -right-20 top-0" />
       <SectionBlob tone="coral" className="w-56 h-56 left-10 bottom-0" />
       <div className="max-w-7xl mx-auto relative">
@@ -31,7 +31,8 @@ export default function HscSpecialties() {
           <p className="eyebrow mb-3">Specialties</p>
           <h2 className="text-3xl md:text-5xl mb-4">The subjects students actually need.</h2>
           <p className="text-lg text-raven/55">
-            Tutoring runs from K–12. The depth is in OC, Selective, and HSC, and in debating and public speaking. Specialist tutors cover a range of HSC subjects in one place: Year 12 graduates with Band 6s and strong ATARs, who know what both the Preliminary and HSC years actually demand. The same standard is here for OC and Selective, so students can aim high before Year 11 even starts.
+          Raven specialises in HSC tutoring, plus first-class debating 
+          and public speaking coaching
           </p>
         </div>
 

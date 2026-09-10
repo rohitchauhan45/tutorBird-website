@@ -49,7 +49,7 @@ export default function TwoExperiences() {
               <li className="check-row">Book with the calendar</li>
               <li className="check-row">Learn online or in person</li>
             </ul>
-            <Link to="/signup" className="btn btn-teal">Sign up for free</Link>
+            <Link to="/signup" className="btn btn-teal">Sign up</Link>
           </div>
           <div className="reveal card card-dark p-8 md:p-10">
             <IconRow items={TUTOR_ICONS} labelClass="text-sky" />

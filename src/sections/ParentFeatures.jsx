@@ -1,21 +1,11 @@
-import { ProfileVisual, CalendarVisual, MessageVisual, NearbyVisual, PaymentsVisual } from '../components/Visuals.jsx'
-import { ShieldCheck } from 'lucide-react'
-
-const SAFETY = [
-  { title: 'Email verification', copy: 'Every user is verified with a valid email address.' },
-  { title: 'WWCC checks', copy: 'Tutors 18+ provide a Working With Children Check.' },
-  { title: 'Identity verification', copy: 'Strongly recommended for every tutor. Once they verify, a purple tick shows on their profile.' },
-  { title: 'Easy reporting', copy: 'Report issues instantly. Reviewed within 24 hours.' },
-  { title: 'Data privacy', copy: 'Information is encrypted. Never shared with third parties.' },
-  { title: 'Academic integrity', copy: 'Guidelines ensure tutoring helps understanding, not shortcuts.' },
-]
+import { ProfileVisual, CalendarVisual, MessageVisual, NearbyVisual, PaymentsVisual, SafetyVisual } from '../components/Visuals.jsx'
 
 const FEATURES = [
   {
     kicker: 'Profiles',
     title: 'Know who you’re booking.',
-    copy: 'See qualifications, reviews, intro videos, pricing, and approximate distance before you message.',
-    points: ['Education and teaching experience', 'Ratings with individual parent reviews', 'Watch an intro before you book'],
+    copy: 'See qualifications, reviews, a tutor description, pricing, and approximate distance before you message.',
+    points: ['Education and teaching experience', 'Ratings with individual parent reviews', 'Profile picture and tutor description'],
     Visual: ProfileVisual,
     flip: false,
   },
@@ -51,6 +41,18 @@ const FEATURES = [
     Visual: PaymentsVisual,
     flip: false,
   },
+  {
+    kicker: 'Trust & safety',
+    title: 'Safety is built in.',
+    copy: 'Every feature is designed with student safety at its core. Parents can trust Raven.',
+    points: [
+      'WWCC checks — tutors 18+ provide a Working With Children Check',
+      'Identity verification — strongly recommended for every tutor. Once they verify, a tick shows next to their name — so you can tell who’s done it',
+      'Easy reporting — report issues instantly. Reviewed within 24 hours',
+    ],
+    Visual: SafetyVisual,
+    flip: true,
+  },
 ]
 
 export default function ParentFeatures() {
@@ -64,7 +66,7 @@ export default function ParentFeatures() {
 
         <div className="space-y-24">
           {FEATURES.map((f) => (
-            <div key={f.title} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${f.flip ? '' : ''}`}>
+            <div key={f.title} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className={`reveal ${f.flip ? 'lg:order-2' : ''}`}>
                 <p className="eyebrow mb-3">{f.kicker}</p>
                 <h3 className="text-3xl md:text-4xl mb-4">{f.title}</h3>
@@ -87,15 +89,21 @@ export default function ParentFeatures() {
           <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div className="reveal">
               <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.16em] uppercase text-sheen border border-sheen/40 rounded-full px-3 py-1 mb-5">
-                <ShieldCheck size={14} strokeWidth={2} aria-hidden="true" /> Trust & safety
+                RavenAI
               </span>
-              <h3 className="text-3xl md:text-4xl mb-4 text-white">Safety is built in.</h3>
-              <p className="text-white/60 text-lg leading-relaxed">
-                Every feature is designed with student safety and academic integrity at its core. Parents can trust Raven.
+              <h3 className="text-3xl md:text-4xl mb-4 text-white">Our premium AI, built for both sides.</h3>
+              <p className="text-white/60 text-lg leading-relaxed mb-4">
+                Practice questions and flashcards for parents and students. An unlimited virtual classroom assistant for tutors. Premium on both plans — free to trial.
               </p>
+              <p className="text-sm font-semibold text-sky">Premium feature · free to trial</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {SAFETY.map((item) => (
+              {[
+                { title: 'Practice questions', copy: 'Subject and syllabus-specific drills for the parent plan.' },
+                { title: 'Flashcards & memory', copy: 'Recall tools that lock in topics between lessons.' },
+                { title: 'Classroom assistant', copy: 'Unlimited help for tutors inside the live classroom.' },
+                { title: 'Free to trial', copy: 'Try RavenAI on Premium before you commit long-term.' },
+              ].map((item) => (
                 <div key={item.title} className="reveal rounded-2xl bg-white/5 border border-white/10 p-4">
                   <p className="font-bold mb-1 text-white">{item.title}</p>
                   <p className="text-sm text-white/55 leading-relaxed">{item.copy}</p>

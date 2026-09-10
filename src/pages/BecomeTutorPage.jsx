@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Users, MapPin, Calendar, CreditCard, Video, Sparkles, Eye, UserPlus, ShieldCheck, BadgeCheck, Search, CalendarCheck } from 'lucide-react'
-import { ClassroomVisual, WhiteboardVisual, CalendarVisual, PaymentsVisual, ProfileVisual } from '../components/Visuals.jsx'
+import { ClassroomVisual, WhiteboardVisual, LiveLessonPreview, CalendarVisual, PaymentsVisual, ProfileVisual } from '../components/Visuals.jsx'
 import FaceIcon from '../components/FaceIcon.jsx'
-import { PageHeroBlob } from '../components/OrganicShapes.jsx'
 
 const BASICS = [
   { title: 'Get listed', copy: 'Create a tutor profile families can actually find.', Visual: ProfileVisual, icon: Users, tone: 'bg-violet/15 text-violet' },
@@ -12,24 +11,23 @@ const BASICS = [
 ]
 
 const NEARBY = [
-  { name: 'Amelia Hart', sub: 'Mathematics Advanced', place: 'Parramatta', km: '1.4 km', tag: 'HSC' },
-  { name: 'Sophie Ellis', sub: 'Debating', place: 'Strathfield', km: '2.1 km', tag: 'Speaking' },
-  { name: 'James Okonkwo', sub: 'English Advanced', place: 'Burwood', km: '2.8 km', tag: 'HSC' },
+  { name: 'Amelia Hart', sub: 'Mathematics Advanced', place: 'Parramatta', km: '1.4 km', tag: 'HSC', color: 'violet' },
+  { name: 'Sophie Ellis', sub: 'Debating', place: 'Strathfield', km: '2.1 km', tag: 'Speaking', color: 'coral' },
+  { name: 'James Okonkwo', sub: 'English Advanced', place: 'Burwood', km: '2.8 km', tag: 'HSC', color: 'teal' },
 ]
 
 const PREMIUM = [
   { title: 'Auto-invoicing', copy: 'Send parents a bill from a template, automatically after each lesson.', icon: CreditCard, tone: 'bg-[#F8E4E1] text-coral', visual: 'invoice' },
-  { title: 'AI tools', copy: 'Generate practice tests on HSC subjects for the students you teach.', icon: Sparkles, tone: 'bg-[#EDE6FB] text-violet', visual: 'ai' },
+  { title: 'RavenAI', copy: 'Unlimited virtual classroom assistant — help while you teach, right beside the whiteboard.', icon: Sparkles, tone: 'bg-[#EDE6FB] text-violet', visual: 'ai' },
   { title: 'Enhanced visibility', copy: 'Your profile can get more views when families search for a tutor.', icon: Eye, tone: 'bg-sky text-iridescence', visual: 'visibility' },
 ]
 
 function PremiumVisual({ kind }) {
   if (kind === 'ai') {
     return (
-      <div className="mt-5 flex flex-wrap gap-1.5">
-        {['Maths Adv', 'Physics', 'English'].map((tag) => (
-          <span key={tag} className="text-[10px] font-bold px-2 py-1 rounded-full bg-violet/15 text-violet">{tag}</span>
-        ))}
+      <div className="mt-5 rounded-xl bg-midnight p-3 text-white">
+        <p className="text-[10px] font-bold uppercase tracking-wide text-sky mb-1.5">RavenAI</p>
+        <p className="text-xs text-white/70 leading-snug">Classroom assistant on · unlimited</p>
       </div>
     )
   }
@@ -68,7 +66,7 @@ const FLOW = [
   {
     n: '03',
     t: 'Create your profile',
-    copy: 'Subjects, rates, availability, and an intro families can watch.',
+    copy: 'Subjects, rates, availability, and a profile families can read.',
     icon: BadgeCheck,
     tone: 'bg-coral/15 text-coral',
   },
@@ -92,7 +90,6 @@ export default function BecomeTutorPage() {
   return (
     <main>
       <header className="page-hero overflow-hidden relative bg-paper">
-        <PageHeroBlob />
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
           <div>
             <p className="eyebrow mb-4">Become a tutor</p>
@@ -100,7 +97,7 @@ export default function BecomeTutorPage() {
             <p className="text-xl text-raven/55 mb-8 max-w-lg">
               Get discovered by families looking for HSC, debating, and public speaking tutors. Run bookings, payments, and lessons in one place.
             </p>
-            <Link to="/signup" className="btn btn-teal">Join now</Link>
+            <Link to="/signup?role=tutor" className="btn btn-teal">Join now</Link>
           </div>
           <ClassroomVisual />
         </div>
@@ -129,7 +126,7 @@ export default function BecomeTutorPage() {
                       </div>
                       {NEARBY.map((student) => (
                         <div key={student.name} className="flex items-center gap-3 py-3 border-t border-raven/10 first:border-0">
-                          <FaceIcon size={40} />
+                          <FaceIcon size={40} name={student.name} color={student.color} />
                           <div className="min-w-0 flex-1">
                             <div className="flex items-center gap-2">
                               <p className="text-sm font-bold leading-tight">{student.name}</p>
@@ -160,7 +157,7 @@ export default function BecomeTutorPage() {
           <p className="logo-mark text-4xl mb-6 text-white">Raven<span>.</span></p>
           <h2 className="text-3xl md:text-5xl mb-4 text-white">Ready to get started?</h2>
           <p className="text-xl text-white/55 mb-8">30-day free trial. No classroom commitment until you upgrade.</p>
-          <Link to="/signup" className="btn btn-teal">Join now</Link>
+          <Link to="/signup?role=tutor" className="btn btn-teal">Join now</Link>
         </div>
       </section>
 
@@ -168,7 +165,7 @@ export default function BecomeTutorPage() {
         <div className="max-w-7xl mx-auto">
           <p className="eyebrow mb-3">Premium</p>
           <h2 className="text-3xl md:text-5xl mb-4">Unlock the classroom.</h2>
-          <p className="text-lg text-raven/55 max-w-2xl mb-10">Your own lesson space, plus invoicing, HSC practice tools, and a profile families are more likely to see.</p>
+          <p className="text-lg text-raven/55 max-w-2xl mb-10">Your own lesson space, plus invoicing, RavenAI in the classroom, and a profile families are more likely to see.</p>
           <div className="card p-6 md:p-8 mb-5 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
             <div>
               <div className="icon-orb bg-violet/15 text-violet mb-5">
@@ -178,20 +175,7 @@ export default function BecomeTutorPage() {
               <h3 className="text-3xl mb-3">Your own classroom and whiteboard.</h3>
               <p className="text-raven/55 text-lg leading-relaxed">This is basically your own Zoom, inside Raven. Run the lesson on video, then draw and write on a shared whiteboard. Both of you stay in the same place.</p>
             </div>
-            <div className="rounded-2xl bg-midnight p-4 text-white">
-              <div className="flex items-center justify-between mb-3">
-                <p className="text-xs font-bold uppercase tracking-wide text-white/50">Live lesson</p>
-                <span className="text-[10px] font-bold uppercase tracking-wide text-sheen">Your Zoom</span>
-              </div>
-              <div className="grid grid-cols-2 gap-2 mb-2">
-                <div className="h-20 rounded-xl bg-violet/40" />
-                <div className="h-20 rounded-xl bg-iridescence/40" />
-              </div>
-              <div className="h-16 rounded-xl bg-[#f4f0e6] relative overflow-hidden">
-                <span className="absolute left-3 right-3 top-1/2 h-px bg-raven/20" />
-                <span className="absolute left-4 top-2 h-10 w-16 rounded-full border-2 border-violet border-b-transparent" />
-              </div>
-            </div>
+            <LiveLessonPreview />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
             {PREMIUM.map((p) => (
@@ -272,7 +256,7 @@ export default function BecomeTutorPage() {
             <h2 className="text-3xl md:text-4xl mb-4 text-white">Join Raven as a tutor.</h2>
             <p className="text-white/55 mb-8">Start with a 30-day free trial, then pick Basic or Premium.</p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link to="/signup" className="btn btn-teal">Join now</Link>
+              <Link to="/signup?role=tutor" className="btn btn-teal">Join now</Link>
               <Link to="/pricing#tutor-plans" className="btn btn-white">View tutor pricing</Link>
             </div>
           </div>

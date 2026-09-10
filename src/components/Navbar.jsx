@@ -14,7 +14,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
-  const overlay = location.pathname === '/' && !scrolled && !open
 
   const close = () => setOpen(false)
 
@@ -40,9 +39,9 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 px-5 md:px-8 py-4 flex items-center gap-6 transition-all duration-300 ${
-          overlay
-            ? 'bg-transparent border-transparent'
-            : 'bg-paper/90 backdrop-blur-md border-b border-raven/[0.06]'
+          scrolled || open
+            ? 'bg-paper/90 backdrop-blur-md border-b border-raven/[0.06]'
+            : 'bg-paper/80 backdrop-blur-sm border-b border-transparent'
         }`}
       >
         <Logo />
@@ -53,7 +52,7 @@ export default function Navbar() {
               {item.label}
             </SectionLink>
           ))}
-          <NavLink to="/pricing#tutor-plans" onClick={goToTutorPricing} className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}>
+          <NavLink to="/pricing" onClick={goToTutorPricing} className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}>
             Pricing
           </NavLink>
         </div>
@@ -61,14 +60,14 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-5 ml-auto">
           <NavLink
             to="/become-a-tutor"
-            className={({ isActive }) => `nav-link ${overlay ? 'nav-link-on-blob' : ''} ${isActive ? 'is-active' : ''}`}
+            className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}
           >
             Become a Tutor
           </NavLink>
           <Link to="/signup" className="btn btn-violet !py-2.5 !px-4 text-sm">
-            Sign up for free
+            Sign up
           </Link>
-          <Link to="/login" className={`btn btn-ghost text-sm font-semibold ${overlay ? 'nav-link-on-blob' : ''}`}>
+          <Link to="/login" className="btn btn-ghost text-sm font-semibold">
             Log in
           </Link>
         </div>
@@ -109,7 +108,7 @@ export default function Navbar() {
               <Link to="/become-a-tutor" onClick={close} className="text-violet">Become a Tutor</Link>
             </div>
             <div className="mt-auto flex flex-col gap-3">
-              <Link to="/signup" onClick={close} className="btn btn-violet w-full">Sign up for free</Link>
+              <Link to="/signup" onClick={close} className="btn btn-violet w-full">Sign up</Link>
               <Link to="/login" onClick={close} className="btn btn-outline w-full">Log in</Link>
             </div>
           </div>
