@@ -13,7 +13,7 @@ export default function HowItWorksPage() {
             <p className="eyebrow mb-4">How it works</p>
             <h1 className="text-4xl md:text-6xl mb-5">Find. Connect. Book. Learn. Manage.</h1>
             <p className="text-xl text-raven/55 mb-8 max-w-lg">
-              A simple path from discovering a tutor to running every lesson, with an in-built calendar at the centre.
+              A simple path from discovering a tutor to running every lesson, with an in built calendar at the centre.
             </p>
             <Link to="/signup" className="btn btn-teal">Sign up for free</Link>
           </div>

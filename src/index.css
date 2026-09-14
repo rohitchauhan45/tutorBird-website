@@ -384,3 +384,13 @@ footer a:hover { color: var(--violet); }
 #tutor-plans {
   scroll-margin-top: 5.5rem;
 }
+
+/*
+  Applied only after navbar section jumps (see ScrollToTop).
+  Fills the viewport so the next section stays below the fold.
+  Removed on the user's next scroll intent. Normal page spacing returns.
+*/
+.section-isolate-fill {
+  min-height: calc(100svh - 5.5rem);
+  box-sizing: border-box;
+}

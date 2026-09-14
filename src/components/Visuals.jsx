@@ -1,4 +1,5 @@
 import FaceIcon from './FaceIcon.jsx'
+import logoMark from '../assets/logo.png'
 import {
   MousePointer2,
   Pencil,
@@ -22,50 +23,81 @@ import {
   Sparkles,
   CreditCard,
   BadgeCheck,
+  Search,
 } from 'lucide-react'
 
 export function HeroVisual() {
   return (
     <div className="relative h-[460px] md:h-[560px] w-full">
-      <div className="absolute right-0 top-2 md:top-8 w-[86%] max-w-[440px] card calendar-window p-4 md:p-5 float-card z-10">
-        <div className="flex items-center justify-between mb-4">
-          <p className="font-bold text-lg">Calendar</p>
-          <span className="text-[11px] font-bold tracking-wide uppercase text-iridescence bg-sky px-2.5 py-1 rounded-full">This week</span>
-        </div>
-        <div className="grid grid-cols-5 gap-2 text-center text-[11px] font-bold text-raven/35 mb-3">
-          {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((d) => <span key={d}>{d}</span>)}
-        </div>
-        <div className="relative h-[220px] md:h-[250px] rounded-2xl bg-paper/80 p-2 overflow-hidden">
-          <div className="grid grid-cols-5 gap-2 h-full">
-            {[0, 1, 2, 3, 4].map((col) => (
-              <div key={col} className="rounded-xl bg-white/70 border border-raven/[0.04]" />
-            ))}
-          </div>
-          <div className="cal-block bg-violet left-[2.5%] top-[12%] w-[17%]">Maths</div>
-          <div className="cal-block bg-sheen left-[22.5%] top-[28%] w-[17%]">Physics</div>
-          <div className="cal-block bg-iridescence cal-block-tall left-[42.5%] top-[10%] w-[17%]">Debate</div>
-          <div className="cal-block bg-violet left-[62.5%] top-[38%] w-[17%]">English</div>
-          <div className="cal-block bg-coral left-[82.5%] top-[18%] w-[15%]">Speak</div>
-          <div className="cal-block bg-sky text-iridescence left-[2.5%] top-[58%] w-[17%]">Chem</div>
-          <div className="cal-block bg-violet/80 left-[42.5%] top-[62%] w-[37%]">HSC clinic</div>
+      <div className="absolute left-0 top-0 z-30 float-card">
+        <div className="w-36 h-36 md:w-44 md:h-44 rounded-3xl bg-white border border-raven/[0.06] shadow-soft flex items-center justify-center overflow-hidden p-0.5">
+          <img src={logoMark} alt="Raven" className="w-full h-full object-contain scale-110" />
         </div>
       </div>
 
-      <div className="absolute left-0 bottom-0 md:bottom-2 w-[72%] max-w-[250px] card p-4 float-card float-card-delayed z-20">
-        <p className="font-bold mb-3">Students</p>
-        {[
-          { name: 'Amelia Hart', sub: 'Mathematics Advanced', bar: 'bg-violet', color: 'violet' },
-          { name: 'Sophie Ellis', sub: 'Debating', bar: 'bg-coral', color: 'coral' },
-          { name: 'Daniel Park', sub: 'Mathematics Extension', bar: 'bg-iridescence', color: 'teal' },
-        ].map((t) => (
-          <div key={t.name} className="flex items-center gap-3 py-2">
-            <FaceIcon size={36} name={t.name} color={t.color} />
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-bold leading-tight truncate">{t.name}</p>
-              <div className={`h-1.5 mt-1.5 rounded-full w-[70%] ${t.bar} opacity-70`} />
+      {/* Main: Find a tutor */}
+      <div className="absolute right-0 top-14 md:top-16 w-[88%] max-w-[440px] card p-4 md:p-5 float-card z-10">
+        <div className="flex items-center justify-between mb-3">
+          <p className="font-bold text-lg">Find a tutor</p>
+          <span className="text-[11px] font-bold tracking-wide uppercase text-violet bg-violet/10 px-2.5 py-1 rounded-full">
+            Near you
+          </span>
+        </div>
+
+        <div className="rounded-xl bg-paper border border-raven/[0.06] px-3 py-2.5 mb-3 flex items-center gap-2">
+          <Search size={14} className="text-raven/30 shrink-0" strokeWidth={2} aria-hidden="true" />
+          <p className="text-sm text-raven/40 truncate">HSC Maths, debating, public speaking…</p>
+        </div>
+
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {['HSC', 'Debating', 'Online', 'Verified'].map((tag) => (
+            <span
+              key={tag}
+              className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${
+                tag === 'HSC' ? 'bg-violet text-white' : 'bg-paper text-raven/55 border border-raven/[0.06]'
+              }`}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="space-y-2.5">
+          {[
+            { name: 'Amelia Hart', sub: 'Mathematics Advanced', meta: '4.9 · 1.2 km', color: 'violet', rate: '$70/hr' },
+            { name: 'Sophie Ellis', sub: 'Debating & Speaking', meta: '4.8 · Online', color: 'coral', rate: '$65/hr' },
+          ].map((t) => (
+            <div key={t.name} className="rounded-xl bg-paper/80 border border-raven/[0.04] p-3 flex items-center gap-3">
+              <FaceIcon size={40} name={t.name} color={t.color} />
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-1.5">
+                  <p className="text-sm font-bold leading-tight truncate">{t.name}</p>
+                  <BadgeCheck size={14} className="text-violet shrink-0" strokeWidth={2} aria-hidden="true" />
+                </div>
+                <p className="text-[11px] text-raven/45 truncate">{t.sub}</p>
+                <p className="text-[11px] text-raven/40 mt-0.5">{t.meta}</p>
+              </div>
+              <p className="text-xs font-bold text-iridescence shrink-0">{t.rate}</p>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Float: in-app message */}
+      <div className="absolute left-0 bottom-2 md:bottom-6 w-[78%] max-w-[270px] card p-4 float-card float-card-delayed z-20">
+        <div className="flex items-center gap-2 mb-3">
+          <MessageSquare size={14} className="text-violet" strokeWidth={2} aria-hidden="true" />
+          <p className="font-bold text-sm">Message</p>
+          <span className="ml-auto text-[10px] font-bold text-sheen bg-sky px-2 py-0.5 rounded-full">New</span>
+        </div>
+        <div className="space-y-2">
+          <div className="rounded-2xl rounded-bl-md bg-paper px-3 py-2 text-[11px] text-raven/70 leading-snug max-w-[95%]">
+            Hi Amelia, are you free Thu 4pm for Maths Ext?
           </div>
-        ))}
+          <div className="rounded-2xl rounded-br-md bg-violet text-white px-3 py-2 text-[11px] leading-snug ml-auto max-w-[90%]">
+            Yes! I’ve got a slot. Booked for Thursday.
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -86,7 +118,7 @@ export function ProfileVisual() {
         <div className="flex flex-wrap gap-3 text-sm text-raven/55 mb-4 pb-4 border-b border-raven/10">
           <span>4.8 (39)</span>
           <span>Approx. 2 km</span>
-          <span className="text-iridescence font-semibold">$70–$100/hr</span>
+          <span className="text-iridescence font-semibold">$70-$100/hr</span>
         </div>
         <div className="flex gap-4 text-xs font-bold tracking-wider uppercase mb-4 border-b border-raven/10">
           <span className="pb-2 border-b-2 border-iridescence">About</span>
@@ -232,7 +264,7 @@ export function SafetyVisual() {
           ))}
         </div>
         <p className="text-xs text-raven/40 mt-3 pt-3 border-t border-raven/10">
-          Purple tick = identity verified — so you can tell who’s done it.
+          Purple tick = identity verified, so you can tell who’s done it.
         </p>
       </div>
     </div>
@@ -302,7 +334,7 @@ function MathBoard({ tall = false }) {
           className="w-full h-full"
           preserveAspectRatio="xMidYMid meet"
         >
-        {/* Circle + diameter AB + point C — clean semicircle theorem */}
+        {/* Circle + diameter AB + point C: clean semicircle theorem */}
         <circle cx="155" cy="145" r="78" fill="rgba(123,92,214,0.06)" stroke="#7B5CD6" strokeWidth="2.2" />
         <line x1="77" y1="145" x2="233" y2="145" stroke="#232C3A" strokeWidth="1.7" />
         <path d="M77 145 L155 67 L233 145 Z" fill="rgba(123,92,214,0.1)" stroke="#232C3A" strokeWidth="1.7" />
@@ -318,7 +350,7 @@ function MathBoard({ tall = false }) {
         <text x="160" y="60" fontSize="12" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="700">C</text>
         <text x="160" y="160" fontSize="11" fill="#1E8AA0" fontFamily="Outfit, sans-serif" fontWeight="600">O</text>
 
-        {/* Notes — fully inside viewBox */}
+        {/* Notes: fully inside viewBox */}
         <rect x="290" y="52" width="200" height="26" rx="5" fill="#F6E27A" opacity="0.95" />
         <text x="302" y="70" fontSize="13" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="700">∠ACB = 90°</text>
         <text x="290" y="108" fontSize="13" fill="#232C3A" fontFamily="Outfit, sans-serif">1. AB is the diameter</text>

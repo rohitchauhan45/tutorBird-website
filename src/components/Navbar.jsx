@@ -45,7 +45,6 @@ export default function Navbar() {
         }`}
       >
         <Logo />
-
         <div className="hidden lg:flex items-center gap-7 flex-1">
           {SECTIONS.map((item) => (
             <SectionLink key={item.hash} hash={item.hash} className="nav-link">
@@ -91,21 +90,31 @@ export default function Navbar() {
                 <X size={22} strokeWidth={1.8} aria-hidden="true" />
               </button>
             </div>
-            <div className="flex flex-col gap-5 text-lg font-semibold">
+            <div className="flex flex-col gap-5">
               {SECTIONS.map((item) => (
                 <SectionLink
                   key={item.hash}
                   hash={item.hash}
                   onClick={close}
-                  className={location.hash === item.hash ? 'text-violet' : ''}
+                  className={`nav-link ${location.hash === item.hash ? 'is-active' : ''}`}
                 >
                   {item.label}
                 </SectionLink>
               ))}
-              <Link to="/pricing#tutor-plans" onClick={() => { goToTutorPricing(); close() }} className={location.pathname === '/pricing' ? 'text-violet' : ''}>
+              <Link
+                to="/pricing#tutor-plans"
+                onClick={() => { goToTutorPricing(); close() }}
+                className={`nav-link ${location.pathname === '/pricing' ? 'is-active' : ''}`}
+              >
                 Pricing
               </Link>
-              <Link to="/become-a-tutor" onClick={close} className="text-violet">Become a Tutor</Link>
+              <Link
+                to="/become-a-tutor"
+                onClick={close}
+                className={`nav-link ${location.pathname === '/become-a-tutor' ? 'is-active' : ''}`}
+              >
+                Become a Tutor
+              </Link>
             </div>
             <div className="mt-auto flex flex-col gap-3">
               <Link to="/signup" onClick={close} className="btn btn-violet w-full">Sign up</Link>

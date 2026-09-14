@@ -6,7 +6,7 @@ import FaceIcon from '../components/FaceIcon.jsx'
 const BASICS = [
   { title: 'Get listed', copy: 'Create a tutor profile families can actually find.', Visual: ProfileVisual, icon: Users, tone: 'bg-violet/15 text-violet' },
   { title: 'Find students near you', copy: 'Match with students by suburb radius. Approximate distance only.', Visual: null, icon: MapPin, tone: 'bg-coral/15 text-coral' },
-  { title: 'Calendar & bookings', copy: 'An in-built calendar for availability, sessions, and reminders.', Visual: CalendarVisual, icon: Calendar, tone: 'bg-sky text-iridescence' },
+  { title: 'Calendar & bookings', copy: 'An in built calendar for availability, sessions, and reminders.', Visual: CalendarVisual, icon: Calendar, tone: 'bg-sky text-iridescence' },
   { title: 'Payments & reminders', copy: 'Invoice through the app and nudge families automatically.', Visual: PaymentsVisual, icon: CreditCard, tone: 'bg-violet/15 text-violet' },
 ]
 
@@ -18,7 +18,7 @@ const NEARBY = [
 
 const PREMIUM = [
   { title: 'Auto-invoicing', copy: 'Send parents a bill from a template, automatically after each lesson.', icon: CreditCard, tone: 'bg-[#F8E4E1] text-coral', visual: 'invoice' },
-  { title: 'RavenAI', copy: 'Unlimited virtual classroom assistant — help while you teach, right beside the whiteboard.', icon: Sparkles, tone: 'bg-[#EDE6FB] text-violet', visual: 'ai' },
+  { title: 'RavenAI', copy: 'Unlimited virtual classroom assistant. Help while you teach, right beside the whiteboard.', icon: Sparkles, tone: 'bg-[#EDE6FB] text-violet', visual: 'ai' },
   { title: 'Enhanced visibility', copy: 'Your profile can get more views when families search for a tutor.', icon: Eye, tone: 'bg-sky text-iridescence', visual: 'visibility' },
 ]
 
@@ -80,7 +80,7 @@ const FLOW = [
   {
     n: '05',
     t: 'Get booked',
-    copy: 'Take sessions on the in-built calendar, online or in person.',
+    copy: 'Take sessions on the in built calendar, online or in person.',
     icon: CalendarCheck,
     tone: 'bg-violet/15 text-violet',
   },

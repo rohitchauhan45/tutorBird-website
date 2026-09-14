@@ -30,7 +30,7 @@ export default function HscSpecialtiesPage() {
           <p className="eyebrow mb-4">Specialties</p>
           <h1 className="text-4xl md:text-6xl mb-5 max-w-3xl">The subjects students actually need.</h1>
           <p className="text-xl text-raven/55 max-w-2xl">
-            Tutoring runs from K–12. The depth is in OC, Selective, and HSC, and in debating and public speaking.
+            Tutoring runs from K-12. The depth is in OC, Selective, and HSC, and in debating and public speaking.
           </p>
         </div>
       </header>

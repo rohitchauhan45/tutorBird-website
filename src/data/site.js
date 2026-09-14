@@ -7,7 +7,7 @@ export const TUTORS = [
     distance: 'Approx. 1.2 km away',
     headline: 'HSC Mathematics Advanced & Physics',
     subjects: 'Mathematics Advanced · Physics',
-    price: '$55–$88',
+    price: '$55-$88',
     availability: 'Online & in-person',
     featured: false,
   },
@@ -19,7 +19,7 @@ export const TUTORS = [
     distance: 'Approx. 2 km away',
     headline: 'HSC Mathematics Extension & Computer Science',
     subjects: 'Mathematics Extension · Mathematics Advanced',
-    price: '$70–$100',
+    price: '$70-$100',
     availability: 'Online & in-person',
     featured: true,
   },
@@ -31,7 +31,7 @@ export const TUTORS = [
     distance: 'Approx. 0.8 km away',
     headline: 'Debating & Public Speaking coach',
     subjects: 'Debating · Public Speaking · English Advanced',
-    price: '$55–$85',
+    price: '$55-$85',
     availability: 'Online',
     featured: false,
   }
@@ -96,7 +96,7 @@ export const SPECIALTIES = [
 export const HOW_IT_WORKS = [
   { num: '01', title: 'Find', copy: 'Discover tutors who match HSC subjects, debating, or public speaking.', icon: 'search' },
   { num: '02', title: 'Connect', copy: 'Message tutors directly and get a feel for the right fit.', icon: 'chat' },
-  { num: '03', title: 'Book', copy: 'Use the in-built calendar to pick a time that works for your week.', icon: 'calendar' },
+  { num: '03', title: 'Book', copy: 'Use the in built calendar to pick a time that works for your week.', icon: 'calendar' },
   { num: '04', title: 'Learn', copy: 'Meet online or in person with tools built for better lessons.', icon: 'learn' },
   { num: '05', title: 'Manage', copy: 'Invoices, reminders, and tutoring admin, all in one place.', icon: 'manage' },
 ]

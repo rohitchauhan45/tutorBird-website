@@ -41,10 +41,6 @@ export default function PricingPage() {
         <p className="text-xl text-raven/55 max-w-xl mx-auto mb-8">
           Parents browse, message, and book for free. Tutors start with a 30-day trial.
         </p>
-        <div className="flex flex-wrap justify-center gap-3">
-          <Link to="/pricing#parent-plans" className="btn btn-outline">Parent plans</Link>
-          <Link to="/signup?role=tutor" className="btn btn-teal">Start your tutor trial</Link>
-        </div>
         </div>
       </header>
 
@@ -79,7 +75,7 @@ export default function PricingPage() {
               </div>
               <p className="text-white/55 mb-8">Everything in Free, plus study tools.</p>
               <ul className="space-y-3 mb-10 flex-1">
-                <li className="check-row">RavenAI — practice questions + flashcards/memory tools</li>
+                <li className="check-row">RavenAI: practice questions + flashcards/memory tools</li>
                 <li className="check-row">Session recordings</li>
                 <li className="check-row">Weekly progress reports</li>
               </ul>
@@ -89,13 +85,16 @@ export default function PricingPage() {
 
           <h2 id="tutor-plans" className="text-2xl md:text-3xl mb-3 scroll-mt-28">For tutors</h2>
           <p className="text-raven/50 mb-6">Tutors start with a 30-day free trial, then choose Basic or Premium. Yearly saves the equivalent of 2 months.</p>
-          <div className="card card-dark p-8 md:p-10 mb-5 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="max-w-xl">
+          <div className="card card-dark p-8 md:p-10 mb-5 flex flex-col md:flex-row md:items-center md:justify-between gap-6 relative overflow-hidden">
+            <div className="blob blob-teal w-48 h-48 -right-10 -top-14 !opacity-45" />
+            <div className="blob blob-violet w-40 h-40 -left-12 -bottom-16 !opacity-40" />
+            <div className="blob blob-coral w-28 h-28 right-1/3 -bottom-10 !opacity-30" />
+            <div className="max-w-xl relative z-10">
               <p className="text-sm font-bold text-sky mb-2">Tutors only</p>
               <h3 className="text-2xl mb-2 text-white">30-day free trial</h3>
-              <p className="text-white/55">Get listed, take bookings, and use the in-built calendar before you pick a paid tutor plan.</p>
+              <p className="text-white/55">Get listed, take bookings, and use the in built calendar before you pick a paid tutor plan.</p>
             </div>
-            <Link to="/signup?role=tutor" className="btn btn-teal shrink-0">Start your tutor trial</Link>
+            <Link to="/signup?role=tutor" className="btn btn-teal shrink-0 relative z-10">Start your tutor trial</Link>
           </div>
           <BillingToggle billing={billing} setBilling={setBilling} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -108,7 +107,7 @@ export default function PricingPage() {
                 <li className="check-row">Get listed on Raven</li>
                 <li className="check-row">Take bookings</li>
                 <li className="check-row">Tutor profile</li>
-                <li className="check-row">In-built calendar</li>
+                <li className="check-row">In built calendar</li>
               </ul>
               <Link to="/signup?role=tutor" className="btn btn-outline w-full">Start your tutor trial</Link>
             </div>
@@ -119,7 +118,7 @@ export default function PricingPage() {
               <p className="text-raven/50 mb-8">Your own classroom, plus tools to teach and get found.</p>
               <ul className="space-y-3 mb-10 flex-1">
                 <li className="check-row">Online classroom & whiteboard</li>
-                <li className="check-row">RavenAI — unlimited virtual classroom assistant</li>
+                <li className="check-row">RavenAI: unlimited virtual classroom assistant</li>
                 <li className="check-row">Auto-invoicing</li>
                 <li className="check-row">Enhanced profile visibility</li>
               </ul>

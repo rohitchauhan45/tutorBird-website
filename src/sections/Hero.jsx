@@ -1,23 +1,19 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { HeroVisual } from '../components/Visuals.jsx'
-import { useTypewriter } from '../hooks/useTypewriter.js'
-
-const WORDS = ['HSC tutoring', 'debating', 'public speaking']
 
 export default function Hero() {
-  const typed = useTypewriter(WORDS)
-
   return (
-    <section className="relative overflow-hidden bg-paper pt-[4.75rem] md:pt-[8rem] pb-8 md:pb-12 px-6 md:px-10">
+    <section className="relative overflow-hidden bg-transparent pt-[4.75rem] md:pt-[8rem] pb-8 md:pb-12 px-6 md:px-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-8 items-start relative z-10">
         <div className="reveal">
-          <p className="eyebrow mb-5">Raven · Learning that fits your life.</p>
-          <p className="text-xl md:text-2xl font-medium text-raven/55 mb-2">Find the right tutor for</p>
-          <h1 className="text-4xl md:text-6xl lg:text-[4.15rem] mb-6 min-h-[1.2em]" aria-label="Find the right tutor for HSC tutoring, debating, and public speaking">
-            {typed}
-            <span className="typed-caret" aria-hidden="true" />
+          <p className="eyebrow mb-5">Find a tutor. Or become one.</p>
+          <h1 className="logo-mark text-5xl md:text-7xl lg:text-[5.5rem] mb-4" aria-label="Raven">
+            Raven<span>.</span>
           </h1>
+          <p className="font-display text-2xl md:text-3xl lg:text-[2.15rem] text-raven mb-6 leading-snug">
+            Learning that fits <em className="italic text-violet font-medium">your</em> life.
+          </p>
           <p className="text-lg md:text-xl text-raven/60 max-w-md leading-relaxed mb-9">
             Personalised tutoring for every stage of learning. HSC subjects, debating, and public speaking, all in one place.
           </p>

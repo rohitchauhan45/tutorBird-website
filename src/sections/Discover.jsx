@@ -16,7 +16,7 @@ export default function Discover({ preview = false, showHeader = true }) {
   }, [filter, preview])
 
   return (
-    <section id="find-a-tutor" className="pt-10 md:pt-12 pb-10 md:pb-12 px-6 md:px-10 bg-paper">
+    <section id="find-a-tutor" className="pt-10 md:pt-12 pb-16 md:pb-24 px-6 md:px-10 bg-paper">
       <div className="max-w-7xl mx-auto">
         {showHeader && (
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 reveal">

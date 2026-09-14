@@ -23,7 +23,7 @@ const TONE = {
 
 export default function HscSpecialties() {
   return (
-    <section id="hsc-specialties" className="pt-20 md:pt-28 pb-16 md:pb-20 px-6 md:px-10 relative overflow-hidden bg-paper">
+    <section id="hsc-specialties" className="pt-8 md:pt-6 pb-16 md:pb-20 px-6 md:px-10 relative overflow-hidden bg-paper">
       <SectionBlob tone="violet" className="w-80 h-80 -right-20 top-0" />
       <SectionBlob tone="coral" className="w-56 h-56 left-10 bottom-0" />
       <div className="max-w-7xl mx-auto relative">
