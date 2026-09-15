@@ -53,12 +53,6 @@ export const FILTERS = [
 
 export const EXAM_FOCUS = [
   {
-    icon: 'grad',
-    label: 'Recent high achievers',
-    copy: 'Year 12 graduates who sat the HSC not long ago, and posted the marks to show for it.',
-    tone: 'violet',
-  },
-  {
     icon: 'trend',
     label: 'Built for results',
     copy: 'Band 6s and a stronger ATAR, not just getting through the year.',

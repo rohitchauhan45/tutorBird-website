@@ -7,7 +7,10 @@ export default function Footer() {
     <footer className="bg-paper pt-20 pb-10 px-6 md:px-10 border-t border-raven/[0.06]">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-2 md:col-span-1">
-          <Logo className="mb-4" />
+          {/* <Logo className="mb-4" /> */}
+      <span className="logo-mark text-2xl text-raven">
+        RAVEN<span>.</span>
+      </span>
           <p className="text-base text-raven/50 leading-relaxed max-w-[16rem]">Learning that fits your life.</p>
         </div>
         <div>

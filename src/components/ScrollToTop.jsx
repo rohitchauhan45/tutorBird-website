@@ -6,8 +6,8 @@ const ISOLATE_SECTIONS = new Set(['how-it-works', 'find-a-tutor', 'hsc-specialti
 
 const FILL_CLASS = 'section-isolate-fill'
 
-/** Ignore intent while smooth scrollIntoView is still running. */
-const ARM_MS = 750
+/** Ignore intent briefly after instant jump. */
+const ARM_MS = 100
 
 export default function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -108,7 +108,7 @@ export default function ScrollToTop() {
       const el = document.getElementById(id)
       if (!el) return
       tryIsolate(el)
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      el.scrollIntoView({ behavior: 'instant', block: 'start' })
     }
 
     frame = requestAnimationFrame(isolateAndScroll)

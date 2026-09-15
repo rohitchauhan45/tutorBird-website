@@ -11,8 +11,11 @@ export default function Hero() {
           <h1 className="logo-mark text-5xl md:text-7xl lg:text-[5.5rem] mb-4" aria-label="Raven">
             Raven<span>.</span>
           </h1>
-          <p className="font-display text-2xl md:text-3xl lg:text-[2.15rem] text-raven mb-6 leading-snug">
-            Learning that fits <em className="italic text-violet font-medium">your</em> life.
+          <p className="font-display !font-normal !leading-[1.1] text-2xl md:text-3xl lg:text-[3.3rem] text-raven mb-6">
+            <span className="block">Learning that</span>
+            <span className="block">
+              fits <em className="italic text-violet !font-normal">your</em> life.
+            </span>
           </p>
           <p className="text-lg md:text-xl text-raven/60 max-w-md leading-relaxed mb-9">
             Personalised tutoring for every stage of learning. HSC subjects, debating, and public speaking, all in one place.

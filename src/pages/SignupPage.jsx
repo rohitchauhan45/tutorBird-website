@@ -43,8 +43,11 @@ export default function SignupPage() {
   const copy = ROLES[role]
 
   return (
-    <main className="min-h-screen page-hero flex items-start justify-center px-6">
-      <div className="card w-full max-w-md p-8">
+    <main className="relative overflow-hidden min-h-screen flex items-start justify-center px-6 pt-20 md:pt-[5.5rem] pb-8">
+      <div className="blob blob-teal w-64 h-64 -right-16 -top-10 !opacity-40" />
+      <div className="blob blob-violet w-52 h-52 -left-14 bottom-0 !opacity-35" />
+      <div className="blob blob-coral w-36 h-36 right-1/4 -bottom-8 !opacity-30" />
+      <div className="card w-full max-w-md p-8 relative z-10">
         <p className="eyebrow mb-2">{copy.eyebrow}</p>
         <h1 className="text-3xl mb-2">{copy.title}</h1>
         <p className="text-raven/50 mb-5">{copy.copy}</p>

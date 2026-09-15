@@ -59,7 +59,7 @@ const FLOW = [
   {
     n: '02',
     t: 'Get verified',
-    copy: 'WWCC for tutors 18+, so families can trust who they book.',
+    copy: 'Optional but strongly recommended ID verification for all tutors, plus WWCC for tutors 18+, so families can trust who they book.',
     icon: ShieldCheck,
     tone: 'bg-sky text-iridescence',
   },

@@ -345,17 +345,17 @@ function MathBoard({ tall = false }) {
         <circle cx="77" cy="145" r="3.8" fill="#232C3A" />
         <circle cx="233" cy="145" r="3.8" fill="#232C3A" />
         <circle cx="155" cy="67" r="4.2" fill="#7B5CD6" />
-        <text x="64" y="164" fontSize="12" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="700">A</text>
-        <text x="238" y="164" fontSize="12" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="700">B</text>
-        <text x="160" y="60" fontSize="12" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="700">C</text>
-        <text x="160" y="160" fontSize="11" fill="#1E8AA0" fontFamily="Outfit, sans-serif" fontWeight="600">O</text>
+        <text x="64" y="164" fontSize="12" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="400">A</text>
+        <text x="238" y="164" fontSize="12" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="400">B</text>
+        <text x="160" y="60" fontSize="12" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="400">C</text>
+        <text x="160" y="160" fontSize="11" fill="#1E8AA0" fontFamily="Outfit, sans-serif" fontWeight="400">O</text>
 
         {/* Notes: fully inside viewBox */}
         <rect x="290" y="52" width="200" height="26" rx="5" fill="#F6E27A" opacity="0.95" />
-        <text x="302" y="70" fontSize="13" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="700">∠ACB = 90°</text>
+        <text x="302" y="70" fontSize="13" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="400">∠ACB = 90°</text>
         <text x="290" y="108" fontSize="13" fill="#232C3A" fontFamily="Outfit, sans-serif">1. AB is the diameter</text>
         <text x="290" y="130" fontSize="13" fill="#232C3A" fontFamily="Outfit, sans-serif">2. C is on the circle</text>
-        <text x="290" y="152" fontSize="13" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="700">3. Angle at C is right</text>
+        <text x="290" y="152" fontSize="13" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="400">3. Angle at C is right</text>
         <text x="290" y="174" fontSize="13" fill="#232C3A" fontFamily="Outfit, sans-serif">4. Semicircle theorem</text>
         </svg>
       </div>
@@ -579,11 +579,11 @@ export function LiveLessonPreview() {
           <circle cx="44" cy="48" r="2.8" fill="#232C3A" />
           <circle cx="112" cy="48" r="2.8" fill="#232C3A" />
           <circle cx="78" cy="14" r="3" fill="#7B5CD6" />
-          <text x="36" y="62" fontSize="10" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="700">A</text>
-          <text x="114" y="62" fontSize="10" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="700">B</text>
-          <text x="82" y="12" fontSize="10" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="700">C</text>
+          <text x="36" y="62" fontSize="10" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="400">A</text>
+          <text x="114" y="62" fontSize="10" fill="#232C3A" fontFamily="Outfit, sans-serif" fontWeight="400">B</text>
+          <text x="82" y="12" fontSize="10" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="400">C</text>
           <text x="140" y="30" fontSize="11" fill="#232C3A" fontFamily="Outfit, sans-serif">AB diameter</text>
-          <text x="140" y="48" fontSize="11" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="700">C on circle → 90°</text>
+          <text x="140" y="48" fontSize="11" fill="#7B5CD6" fontFamily="Outfit, sans-serif" fontWeight="400">C on circle → 90°</text>
           <text x="140" y="66" fontSize="11" fill="#232C3A" fontFamily="Outfit, sans-serif">Shared board · live</text>
         </svg>
       </div>

@@ -48,7 +48,7 @@ const FEATURES = [
     copy: 'Every feature is designed with student safety at its core. Parents can trust Raven.',
     points: [
       'WWCC checks: tutors 18+ provide a Working With Children Check',
-      'Identity verification is strongly recommended for every tutor. Once they verify, a tick shows next to their name, so you can tell who’s done it',
+      'Optional but strongly recommended ID verification for all tutors, plus WWCC for tutors 18+, so families can trust who they book. Once they verify, a tick shows next to their name, so you can tell who’s done it',
       'Easy reporting: report issues instantly. Reviewed within 24 hours',
     ],
     Visual: SafetyVisual,
@@ -126,7 +126,7 @@ const RAVEN_AI_FEATURES = [
   },
   {
     title: 'Classroom assistant',
-    copy: 'Unlimited help for tutors inside the live classroom.',
+    copy: 'Unlimited help for tutors and students inside the live classroom.',
     Mock: AssistantMock,
   },
   {

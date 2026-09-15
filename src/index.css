@@ -15,7 +15,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 
 body {
   margin: 0;
@@ -29,7 +29,7 @@ body {
 
 h1, h2, h3, h4, .font-display {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.08;
   color: var(--raven);
@@ -38,14 +38,14 @@ h1, h2, h3, h4, .font-display {
 
 .logo-mark {
   font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.04em;
 }
 .logo-mark span { color: var(--violet); }
 
 .eyebrow {
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--violet);
@@ -58,7 +58,7 @@ h1, h2, h3, h4, .font-display {
   gap: 0.45rem;
   padding: 0.9rem 1.45rem;
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 0.95rem;
   letter-spacing: -0.01em;
   border: 1.5px solid transparent;
@@ -152,7 +152,7 @@ h1, h2, h3, h4, .font-display {
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 400;
   border: 1.5px solid rgba(35, 44, 58, 0.12);
   background: #fff;
   color: var(--raven);
@@ -167,8 +167,8 @@ h1, h2, h3, h4, .font-display {
 
 .nav-link {
   position: relative;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.0rem;
+  font-weight: 400;
   color: var(--raven);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -236,7 +236,7 @@ h1, h2, h3, h4, .font-display {
   height: 2.15rem;
   border-radius: 0.7rem;
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
   display: flex;
   align-items: center;
@@ -295,7 +295,7 @@ h1, h2, h3, h4, .font-display {
   height: 2.1rem;
   border-radius: 0.45rem;
   font-size: 0.65rem;
-  font-weight: 700;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,7 +347,7 @@ input, textarea {
 .billing-toggle button {
   padding: 0.5rem 1.05rem;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 400;
   background: transparent;
   border: none;
   color: rgba(35, 44, 58, 0.45);

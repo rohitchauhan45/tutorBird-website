@@ -17,6 +17,13 @@ export default {
         sans: ['Outfit', 'system-ui', 'sans-serif'],
         display: ['Fraunces', 'Georgia', 'serif'],
       },
+      fontWeight: {
+        medium: '400',
+        semibold: '400',
+        bold: '400',
+        extrabold: '500',
+        black: '400',
+      },
       boxShadow: {
         card: '0 18px 50px rgba(35, 44, 58, 0.08)',
         soft: '0 8px 28px rgba(35, 44, 58, 0.06)',

@@ -20,7 +20,7 @@ export default function Navbar() {
   const goToTutorPricing = () => {
     if (location.pathname !== '/pricing') return
     const section = document.getElementById('tutor-plans')
-    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    if (section) section.scrollIntoView({ behavior: 'instant', block: 'start' })
   }
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function Navbar() {
           <Link to="/signup" className="btn btn-violet !py-2.5 !px-4 text-sm">
             Sign up
           </Link>
-          <Link to="/login" className="btn btn-ghost text-sm font-semibold">
+          <Link to="/login" className="btn btn-ghost text-sm font-normal">
             Log in
           </Link>
         </div>
