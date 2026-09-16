@@ -91,22 +91,22 @@ export default function PricingTeaser() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-12 items-start">
           <div className="reveal">
             <p className="eyebrow mb-3">Pricing</p>
-            <h2 className="text-3xl md:text-5xl mb-4">Simple pricing.</h2>
+            <h2 className="text-3xl md:text-4xl mb-3">Simple pricing.</h2>
             <p className="text-lg text-raven/55 leading-relaxed">
-              <span className="font-display text-2xl md:text-3xl text-raven mr-2">Free for parents</span>
-              Browse, message & book at no cost. Upgrade anytime to Premium when you want more study tools.
+              <span className="font-display text-2xl md:text-[30px] text-raven mr-2">Free for parents</span>
             </p>
+            <p className='text-lg text-raven/55 leading-tight mt-2'>Browse, message & book at no cost. Upgrade anytime to Premium when you want more study tools.</p>
           </div>
 
           <div className="reveal">
             <p className="text-sm font-bold text-violet mb-2">Parents & students</p>
             <h3 className="text-3xl md:text-4xl mb-3">Premium</h3>
-            <p className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+            <p className="text-4xl md:text-5xl font-extrabold tracking-tight">
               <span className="text-lg md:text-xl font-semibold text-raven/45 mr-2">an additional</span>
               $24.95
               <span className="text-lg font-semibold text-raven/40">/mo</span>
             </p>
-            <p className="text-lg text-raven/55 leading-relaxed">
+            <p className="text-lg text-raven/55 leading-tight mt-2">
               RavenAI, session recordings, and weekly progress reports, on top of free browse, message, and book.
             </p>
           </div>

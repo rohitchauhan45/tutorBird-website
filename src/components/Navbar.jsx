@@ -102,7 +102,7 @@ export default function Navbar() {
                 </SectionLink>
               ))}
               <Link
-                to="/pricing#tutor-plans"
+                to="/pricing"
                 onClick={() => { goToTutorPricing(); close() }}
                 className={`nav-link ${location.pathname === '/pricing' ? 'is-active' : ''}`}
               >

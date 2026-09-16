@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="col-span-2 md:col-span-1">
           {/* <Logo className="mb-4" /> */}
       <span className="logo-mark text-2xl text-raven">
-        RAVEN<span>.</span>
+        Raven<span>.</span>
       </span>
           <p className="text-base text-raven/50 leading-relaxed max-w-[16rem]">Learning that fits your life.</p>
         </div>
