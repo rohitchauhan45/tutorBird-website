@@ -47,9 +47,9 @@ const FEATURES = [
     title: 'Safety is built in.',
     copy: 'Every feature is designed with student safety at its core. Parents can trust Raven.',
     points: [
-      "WWCC (Working With Children Check): Strongly recommended for all tutors 18+. If a tutor holds one, it's viewable on their profile." ,
-      "ID verification: Strongly recommended for every tutor. Verified tutors get a tick next to their name, so you can tell at a glance.",
-      "Easy reporting: Report issues instantly, reviewed within 24 hours.",
+      "Strongly recommended WWCC (Working With Children Check) for tutors 18+, shown on their profile" ,
+      "Strongly recommended ID verification for all tutors, with a tick by their name once verified",
+      "Report issues instantly, reviewed within 24 hours",
     ],
     Visual: SafetyVisual,
     flip: true,

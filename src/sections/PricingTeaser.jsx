@@ -93,7 +93,7 @@ export default function PricingTeaser() {
             <p className="eyebrow mb-3">Pricing</p>
             <h2 className="text-3xl md:text-4xl mb-3">Simple pricing.</h2>
             <p className="text-lg text-raven/55 leading-relaxed">
-              <span className="font-display text-2xl md:text-[30px] text-raven mr-2">Free for parents</span>
+              <span className="text-4xl md:text-5xl font-extrabold text-raven mr-2">Free for parents</span>
             </p>
             <p className='text-lg text-raven/55 leading-tight mt-2'>Browse, message & book at no cost. Upgrade anytime to Premium when you want more study tools.</p>
           </div>
